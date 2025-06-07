@@ -1,5 +1,5 @@
-#include "ft_printf.h"
-#include "libft/libft.h"
+#include "../include/ft_printf.h"
+#include "../include/libft.h"
 
 int	ft_print_num(int n)
 {
@@ -11,3 +11,4 @@ int	ft_print_num(int n)
 	free(num);
 	return (counter);
 }
+
