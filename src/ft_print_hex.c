@@ -25,29 +25,3 @@ int	ft_print_hex(unsigned int n, char c)
 	count += len;
 	return (count);
 }
-
-int	ft_print_pointer(void *p)
-{
-	char	*base;
-	int		count;
-	int		len;
-	unsigned long	n;
-
-	n = (unsigned long)p;
-	base = "0123456789abcdef";
-	if (!ft_print_str("0x"))
-		return (-1);
-	count = 2;
-	if (n >= 16)
-	{
-			len = ft_print_pointer(n / 16);
-			if (len == -1)
-				return (-1);
-			count += len;
-	}
-	len = ft_print_char(base[n % 16]);
-	if (len == -1)
-		return (-1);
-	count += len;
-	return (count);
-}

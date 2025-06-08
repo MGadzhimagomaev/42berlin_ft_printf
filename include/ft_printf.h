@@ -22,6 +22,6 @@ int	ft_print_str(const char *);
 int	ft_print_num(int n);
 int	ft_print_unsigned_int(unsigned int n);
 int	ft_print_hex(unsigned int n, char c);
-int	ft_print_pointer(void *p);
+int	ft_print_ptr(void *p);
 
 #endif

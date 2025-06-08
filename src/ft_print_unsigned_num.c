@@ -24,22 +24,25 @@ static char	*ft_uitoa(unsigned int n)
 	if (!output)
 		return (NULL);
 	output[len] = '\0';
-	while (n >= 10)
+	while (len > 0)
 	{
 		output[--len] = (n % 10) + '0';
 		n /= 10;
 	}
-	output[len - 1] = n + '0';
 	return (output);
 }
 
 int	ft_print_unsigned_int(unsigned int n)
 {
 	char			*num;
-	unsigned int	counter;
+	int	counter;
 
 	num = ft_uitoa(n);
+	if (!num)
+		return (-1);
 	counter = ft_print_str(num);
 	free(num);
+	if (counter == -1)
+		return (-1);
 	return (counter);
 }

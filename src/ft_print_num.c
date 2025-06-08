@@ -7,8 +7,11 @@ int	ft_print_num(int n)
 	int		counter;
 
 	num = ft_itoa(n);
+	if (!num)
+		return (-1);
 	counter = ft_print_str(num);
 	free(num);
+	if (counter == -1)
+		return (-1);
 	return (counter);
 }
-

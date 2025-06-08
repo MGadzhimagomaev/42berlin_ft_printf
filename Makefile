@@ -4,7 +4,7 @@ LIBFT		=	libft
 SRC_DIR		=	src/
 
 SRC_FILES	=	ft_printf ft_print_char ft_print_str ft_print_num \
-				ft_print_hex ft_print_unsigned_num
+				ft_print_hex ft_print_unsigned_num ft_print_ptr
 
 SRC			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ			=	$(SRC:.c=.o)
