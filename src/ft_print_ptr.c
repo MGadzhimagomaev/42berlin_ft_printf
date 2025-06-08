@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mgadzhim <mgadzhim@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/08 19:23:33 by mgadzhim          #+#    #+#             */
+/*   Updated: 2025/06/08 20:40:10 by mgadzhim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/ft_printf.h"
 #include "../include/libft.h"
 
@@ -25,11 +37,13 @@ static int	ft_print_hex_ptr(unsigned long n)
 
 int	ft_print_ptr(void *p)
 {
-	int		count;
-	int		len;
+	int				count;
+	int				len;
 	unsigned long	n;
 
 	n = (unsigned long)p;
+	if (!p)
+		return (ft_print_str("(nil)"));
 	count = ft_print_str("0x");
 	if (count == -1)
 		return (-1);

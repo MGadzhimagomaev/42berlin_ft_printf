@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_unsigned_num.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mgadzhim <mgadzhim@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/08 19:23:41 by mgadzhim          #+#    #+#             */
+/*   Updated: 2025/06/08 20:33:17 by mgadzhim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/ft_printf.h"
 #include "../include/libft.h"
 
@@ -34,8 +46,8 @@ static char	*ft_uitoa(unsigned int n)
 
 int	ft_print_unsigned_int(unsigned int n)
 {
-	char			*num;
-	int	counter;
+	char	*num;
+	int		counter;
 
 	num = ft_uitoa(n);
 	if (!num)
